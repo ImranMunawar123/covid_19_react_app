@@ -17,6 +17,7 @@ const Chart = ( { data: {confirmed, recovered, deaths}, country }) => {
     const lineChart = (
         dailyData.length ? 
         (<Line
+            height={220}
             data={{
                 labels: dailyData.map(({ date }) => date),
                 datasets: [{
@@ -71,6 +72,7 @@ const Chart = ( { data: {confirmed, recovered, deaths}, country }) => {
         confirmed 
         ? (
             <Bar
+                height={220}
                 data = {{
                     labels: ['Infected', ' Recovered', ' Deaths'],
                     datasets: [{
@@ -116,6 +118,7 @@ const Chart = ( { data: {confirmed, recovered, deaths}, country }) => {
         dailyData.length 
         ? (
             <Bar
+                height={220}
                 data = {{
                     labels: dailyData.map(({ date }) => date),
                     datasets: [{
