@@ -9,16 +9,72 @@
     margin: 6% 2% !important;
 }
 
+.main_heading{
+    font-family: cursive;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 36px;
+}
+
+.my_card {
+    position: absolute;
+    width: 32px;
+    border-radius: 50%;
+    margin-top: -55px;
+    border: 1px solid #17a2b8!important;
+    background-color: white;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.text_info {
+    color: #17a2b8 !important;
+}
+
+.p_3 {
+    padding: 1rem!important;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.infected_border_info {
+    border-color: #17a2b8!important;
+}
+
 .infected{
-    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+    border: 1px solid #17a2b8!important;
+}
+
+.recovered_border_info {
+    border-color: #28a745!important;
 }
 
 .recovered{
-    border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+    border: 1px solid #28a745 !important;
+}
+
+.deaths_border_info {
+    border-color: #dc3545 !important;
 }
 
 .deaths{
-    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+    border: 1px solid #dc3545 !important;
+}
+
+.infected_heading {
+    color: #17a2b8;
+}
+
+.recovered_heading {
+    color: #28a745;
+}
+
+.death_heading {
+    color: #dc3545;
 }
 
 @media only screen and (max-width: 770px) {
