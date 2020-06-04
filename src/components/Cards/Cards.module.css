@@ -81,4 +81,23 @@
     .card {
       margin: 6% 0 !important;
     }
+
+    .my_card {
+        position: absolute;
+        width: 32px;
+        border-radius: 50%;
+        margin-top: -55px;
+        background-color: white;
+        justify-content: center;
+        margin-left: 30%;
+    }
+
+    .main_heading{
+        font-size: 17px;
+        margin-bottom: 50px;
+    }
+
+    .image_size{
+        width: 24px;
+    }
   }
