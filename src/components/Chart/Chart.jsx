@@ -22,15 +22,47 @@ const Chart = ( { data: {confirmed, recovered, deaths}, country }) => {
                 datasets: [{
                     data: dailyData.map(({ confirmed }) => confirmed),
                     label: 'Infected',
-                    borderColor: '#3333ff',
-                    fill: true
+                    borderColor: '#17a2b8',
+                    // pointStyle: "line",
+                    fill: false
                 }, {
                     data: dailyData.map(({ deaths }) => deaths),
                     label: 'Deaths',
-                    borderColor: 'red',
-                    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-                    fill: true
+                    borderColor: 'rgb(229, 115, 115)',
+                    backgroundColor: 'rgb(229, 115, 115)',
+                    // pointStyle: "line",
+                    fill: false
                 }]
+            }}
+            options = {{
+                title: { 
+                    display: true, 
+                    text: 'COVID-19 Cases in Overall',
+                    fontSize: 17,
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false
+                        },
+                        ticks: {
+                            callback: function(label, index, labels) {
+                                return label/1000+'k';
+                            }
+                        }
+                    }]
+                },
+                legend: {
+                    labels : {
+                        usePointStyle: false,
+                        fontSize: 14,
+                    }
+                }
             }}
         />) : null
     )
@@ -44,23 +76,90 @@ const Chart = ( { data: {confirmed, recovered, deaths}, country }) => {
                     datasets: [{
                         label: 'People',
                         backgroundColor: [
-                            'rgba(0, 0, 255, 0.5)',
-                            'rgba(0, 255, 0, 0.5)',
-                            'rgba(255, 0, 0, 0.5)'
+                            '#17a2b8',
+                            '#28a745',
+                            '#dc3545'
                         ],
                         data: [confirmed.value, recovered.value, deaths.value]
                     }]
                 }}
                 options = {{
                     legend: { display: false },
-                    title: { display: true, text: `Current state in ${country}`}
+                    title: { 
+                        display: true, 
+                        text: `Current state in ${country}`,
+                        fontSize: 17,
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                drawOnChartArea: false
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                drawOnChartArea: false
+                            },
+                            // ticks: {
+                            //     callback: function(label, index, labels) {
+                            //         return label/1000+'k';
+                            //     }
+                            // }
+                        }]
+                    },
+                }}
+            />
+        ) : null
+    )
+
+    const barChartDaily = (
+        dailyData.length 
+        ? (
+            <Bar
+                data = {{
+                    labels: dailyData.map(({ date }) => date),
+                    datasets: [{
+                        label: 'Infected',
+                        backgroundColor: '#17a2b8',
+                        data: dailyData.map(({ confirmed }) => confirmed)
+                    }]
+                }}
+                options = {{
+                    legend: { display: true },
+                    title: { 
+                        display: true, 
+                        text: `Covid-19 Daily Cases in World`,
+                        fontSize: 17,
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                drawOnChartArea: false
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                drawOnChartArea: false
+                            },
+                            ticks: {
+                                callback: function(label, index, labels) {
+                                    return label/1000+'k';
+                                }
+                            }
+                        }]
+                    },
                 }}
             />
         ) : null
     )
     return(
            <div className={styles.container}>
-                {country ? barChart : lineChart}
+               <div className={styles.containerDiv1}>
+                    {country ? barChart : lineChart}
+               </div>
+               <div className={styles.containerDiv2}>
+                    {barChartDaily}
+               </div>
            </div>
     )
 }
