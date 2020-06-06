@@ -114,47 +114,47 @@ const Chart = ( { data: {confirmed, recovered, deaths}, country }) => {
         ) : null
     )
 
-    const barChartDaily = (
-        dailyData.length 
-        ? (
-            <Bar
-                height={230}
-                data = {{
-                    labels: dailyData.map(({ date }) => date),
-                    datasets: [{
-                        label: 'Infected',
-                        backgroundColor: '#17a2b8',
-                        data: dailyData.map(({ confirmed }) => confirmed)
-                    }]
-                }}
-                options = {{
-                    legend: { display: true },
-                    title: { 
-                        display: true, 
-                        text: `Covid-19 Daily Cases in World`,
-                        fontSize: 17,
-                    },
-                    scales: {
-                        xAxes: [{
-                            gridLines: {
-                                drawOnChartArea: false
-                            }
-                        }],
-                        yAxes: [{
-                            gridLines: {
-                                drawOnChartArea: false
-                            },
-                            ticks: {
-                                callback: function(label, index, labels) {
-                                    return label/1000+'k';
-                                }
-                            }
-                        }]
-                    },
-                }}
-            />
-        ) : null
-    )
+    // const barChartDaily = (
+    //     dailyData.length 
+    //     ? (
+    //         <Bar
+    //             height={230}
+    //             data = {{
+    //                 labels: dailyData.map(({ date }) => date),
+    //                 datasets: [{
+    //                     label: 'Infected',
+    //                     backgroundColor: '#17a2b8',
+    //                     data: dailyData.map(({ confirmed }) => confirmed)
+    //                 }]
+    //             }}
+    //             options = {{
+    //                 legend: { display: true },
+    //                 title: { 
+    //                     display: true, 
+    //                     text: `Covid-19 Daily Cases in World`,
+    //                     fontSize: 17,
+    //                 },
+    //                 scales: {
+    //                     xAxes: [{
+    //                         gridLines: {
+    //                             drawOnChartArea: false
+    //                         }
+    //                     }],
+    //                     yAxes: [{
+    //                         gridLines: {
+    //                             drawOnChartArea: false
+    //                         },
+    //                         ticks: {
+    //                             callback: function(label, index, labels) {
+    //                                 return label/1000+'k';
+    //                             }
+    //                         }
+    //                     }]
+    //                 },
+    //             }}
+    //         />
+    //     ) : null
+    // )
     return(
            <div className={styles.container}>
                <div className={styles.containerDiv1}>
