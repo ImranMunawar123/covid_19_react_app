@@ -160,9 +160,9 @@ const Chart = ( { data: {confirmed, recovered, deaths}, country }) => {
                <div className={styles.containerDiv1}>
                     {country ? barChart : lineChart}
                </div>
-               <div className={styles.containerDiv2}>
+               {/* <div className={styles.containerDiv2}>
                     {barChartDaily}
-               </div>
+               </div> */}
            </div>
     )
 }
