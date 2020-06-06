@@ -15,7 +15,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
     return(
             <div className={styles.container}>
                 <h1 className={styles.main_heading}><img className={styles.image_size} alt="icon" src="https://img.icons8.com/doodle/48/000000/country.png"/>WORLDCOVID-19 UPDATES</h1>
-                <p align="center">Last Updated: {new Date(lastUpdate).toDateString()}</p>
+                <p className={styles.date} align="center">Last Updated: {new Date(lastUpdate).toDateString()}</p>
 
                 <Grid container spacing={6} justify="center">
                     <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected, styles.border_info)}>

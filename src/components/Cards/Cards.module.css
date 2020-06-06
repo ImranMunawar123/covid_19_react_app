@@ -82,6 +82,9 @@
       margin: 6% 0 !important;
     }
 
+    .date{
+        margin-bottom: 15%;
+    }
     .my_card {
         position: absolute;
         width: 32px;
@@ -95,7 +98,8 @@
     .main_heading{
         font-family: sans-serif;
         font-size: 17px;
-        margin-bottom: 50px;
+        margin-bottom: 10%;
+        margin-top: 30px;
     }
 
     .image_size{
