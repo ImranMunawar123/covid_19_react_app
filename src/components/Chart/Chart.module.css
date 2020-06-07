@@ -12,8 +12,10 @@
     height: 100%;
     background: rgb(247, 247, 247);
     border-radius: 1%;
-    padding: 15px;
+    padding: 15px 5px;
     margin-bottom: 20px;
+    border: 1px solid darkgray;
+    margin-left: -5px;
 }
 
 .chartjs-render-monitor{
@@ -37,8 +39,11 @@
       height: 100%;
     }
     .containerDiv1{
-      margin-left: -15px;
+      margin-left: -23px;
       height: 100%;
+      margin-top: 30px;
+      width: 112%;
+      border: 1px solid darkgray;
     }
     .containerDiv2{
       margin-left: -15px;

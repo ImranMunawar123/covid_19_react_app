@@ -38,8 +38,9 @@ const Chart = ( { data: {confirmed, recovered, deaths}, country }) => {
             options = {{
                 title: { 
                     display: true, 
-                    text: 'COVID-19 Cases in Overall',
+                    text: 'COVID-19 Cases Overall',
                     fontSize: 17,
+                    color: 'black'
                 },
                 scales: {
                     xAxes: [{
