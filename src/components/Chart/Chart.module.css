@@ -53,23 +53,22 @@
     height: 100%;
   }
   .containerDiv1 {
-    margin-left: -26px;
+    margin-left: -25px;
     height: 100%;
-    margin-top: 15px;
-    width: 113%;
+    margin-top: 5px;
+    width: 110%;
     border: 1px solid darkgray;
   }
   .containerDiv2 {
     height: 100%;
-    width: 105%;
+    width: 103%;
     margin-left: -25px;
-    margin-bottom: 30px;
-    margin-top: 5px;
+    margin-bottom: 25px;
   }
 
   .containerDiv3 {
     height: 100%;
-    width: 110%;
+    width: 109%;
     margin-left: -25px;
   }
 
