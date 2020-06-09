@@ -1,52 +1,79 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 64%;
+  width: 74%;
 }
 
-.containerDiv1{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: rgb(247, 247, 247);
-    border-radius: 1%;
-    padding: 15px 5px;
-    margin-bottom: 20px;
-    border: 1px solid darkgray;
-    margin-left: -5px;
-}
-
-.chartjs-render-monitor{
-  min-height: 100% !important;
-}
-
-.containerDiv2{
+.containerDiv1 {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 15px;
   background: rgb(247, 247, 247);
   border-radius: 1%;
-  margin-top: 20px;
+  padding: 15px 9px;
+  margin-bottom: 27px;
+  border: 1px solid darkgray;
+  margin-left: -8px;
+}
+
+.chartjs-render-monitor {
+  min-height: 100% !important;
+}
+
+.containerDiv2 {
+  justify-content: center;
+  width: 35%;
+  height: 100%;
+  padding: 20px;
+  background: rgb(247, 247, 247);
+  border-radius: 1%;
+  border: 1px solid darkgray;
+  margin-left: -7px;
+}
+.containerDiv3 {
+  justify-content: center;
+  width: 65%;
+  height: 100%;
+  padding: 11px;
+  background: rgb(247, 247, 247);
+  border-radius: 1%;
+  border: 1px solid darkgray;
+  margin-left: 30px;
+}
+
+.displayDiv {
+  display: flex;
 }
 
 @media only screen and (max-width: 770px) {
-    .container {
-      width: 100%;
-      height: 100%;
-    }
-    .containerDiv1{
-      margin-left: -23px;
-      height: 100%;
-      margin-top: 30px;
-      width: 112%;
-      border: 1px solid darkgray;
-    }
-    .containerDiv2{
-      margin-left: -15px;
-      height: 100%;
-    }
+  .container {
+    width: 100%;
+    height: 100%;
   }
+  .containerDiv1 {
+    margin-left: -26px;
+    height: 100%;
+    margin-top: 15px;
+    width: 113%;
+    border: 1px solid darkgray;
+  }
+  .containerDiv2 {
+    height: 100%;
+    width: 105%;
+    margin-left: -25px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+  }
+
+  .containerDiv3 {
+    height: 100%;
+    width: 110%;
+    margin-left: -25px;
+  }
+
+  .displayDiv {
+    display: unset;
+  }
+}
